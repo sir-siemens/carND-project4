@@ -55,7 +55,9 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 #### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one.
+
 ![test image after undistort][image_test_undistort]
+
 The function `def undistort_img(img, mtx, dist)` performs this step. `img` is the original image, `mtx` and `dist` are the parameter computed from the calibration step.  
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
@@ -86,6 +88,7 @@ This resulted in the following source and destination points:
 | 1000, 650      | 1000, 650       |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
+
 |![image_selection][image_select_points]|![image_selection][image_perspective]|
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
