@@ -1,5 +1,3 @@
----
-
 **Advanced Lane Finding Project**
 
 The goals / steps of this project are the following:
@@ -30,8 +28,6 @@ output_final
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
----
 
 ### Writeup / README
 
