@@ -44,9 +44,11 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 ##### Image with distortion
-![Image before calibration][image_origin]
+<img src="./camera_cal/origin9.jpg" width="380">
+
 ##### Correct distortion with calibration parameter
-![Image after undistort][image_undistort]
+
+<img src="./camera_cal/undistort9.jpg" width="380">
 
 ### Pipeline (single images)
 
