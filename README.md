@@ -103,6 +103,7 @@ The position of the vehicle with respect to the lane center is computed by evalu
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in function `def inverse_warp(undist,   left_fitx , right_fitx, ploty , Minv)`. The result is shown in the following
+
 ![alt text][image_output_final]
 
 ---
