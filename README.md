@@ -1,5 +1,3 @@
----
-
 **Advanced Lane Finding Project**
 
 The goals / steps of this project are the following:
@@ -23,15 +21,13 @@ The goals / steps of this project are the following:
 [image_perspective]: ./output_images/perspective_transform.png "Fit Visual"
 [image_polyfit]: ./output_images/polyfit.png "Output"
 [image_output_final]: ./output_images/output_final.png "Output"
-output_final
+
 
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
----
 
 ### Writeup / README
 
@@ -48,16 +44,20 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 ##### Image with distortion
-![Image before calibration][image_origin]
+<img src="./camera_cal/origin9.jpg" width="380">
+
 ##### Correct distortion with calibration parameter
-![Image after undistort][image_undistort]
+
+<img src="./camera_cal/undistort9.jpg" width="380">
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one.
+
 ![test image after undistort][image_test_undistort]
+
 The function `def undistort_img(img, mtx, dist)` performs this step. `img` is the original image, `mtx` and `dist` are the parameter computed from the calibration step.  
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
@@ -88,6 +88,7 @@ This resulted in the following source and destination points:
 | 1000, 650      | 1000, 650       |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
+
 |![image_selection][image_select_points]|![image_selection][image_perspective]|
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
@@ -105,6 +106,7 @@ The position of the vehicle with respect to the lane center is computed by evalu
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in function `def inverse_warp(undist,   left_fitx , right_fitx, ploty , Minv)`. The result is shown in the following
+
 ![alt text][image_output_final]
 
 ---
