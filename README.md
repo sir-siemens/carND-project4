@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 [image_perspective]: ./output_images/perspective_transform.png "Fit Visual"
 [image_polyfit]: ./output_images/polyfit.png "Output"
 [image_output_final]: ./output_images/output_final.png "Output"
-output_final
+
 
 [video1]: ./project_video.mp4 "Video"
 
